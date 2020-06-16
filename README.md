@@ -10,6 +10,8 @@ A very basic Football app built using:
 
 **Markup/Styling**: HTML5/CSS3
 
+**Football Data**: [Football Data API](https://www.football-data.org/documentation/quickstart)
+
 The app fetches data from a REST API and displays it on select.
 
 This exercise was tasked to me by CodeClan, Glasgow where I studied towards a PDA Level 8 in Professional Software Development. The exercise brief can be found below.
@@ -21,12 +23,6 @@ This exercise was tasked to me by CodeClan, Glasgow where I studied towards a PD
 Practice what we’ve learned in the past few days by making a small React app. This could be similar to the countries app we made that had a dropdown menu, which when selected, displayed some information about that option.
 
 Remember to have a container and component folder. Containers will handle data requests, state changes and callbacks. Components will handle visualisation logic (and only have access to props).
-
-**Football Data**
-
-[Football Data API](https://www.football-data.org/documentation/quickstart)
-
-You need to sign up for a free [API key](http://api.football-data.org/register) which should be emailed to you right away, and then include this in any requests to the API.
 
 ---
 
