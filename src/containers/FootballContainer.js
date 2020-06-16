@@ -8,8 +8,11 @@ class FootballContainer extends Component {
     super(props);
 
     this.state = {
-      competitions: []
+      competitions: [],
+      competitionId: 0
     }
+
+    this.handleCompetitionSelect = this.handleCompetitionSelect.bind(this)
   }
 
   componentDidMount() {
@@ -21,12 +24,18 @@ class FootballContainer extends Component {
     .catch(err => console.err);
   }
 
+  handleCompetitionSelect(id) {
+    this.setState({competitionId: id});
+  }
 
   render() {
+    const selectedCompetition = this.state.competitions.find(competition =>
+    competition.id === parseInt(this.state.competitionId));
+
     return (
       <Fragment>
-        <CompetitionSelector competitions={this.state.competitions}/>
-        <CompetitionDetails/>
+        <CompetitionSelector competitions={this.state.competitions} onCompSelect={this.handleCompetitionSelect}/>
+        <CompetitionDetails competition={selectedCompetition}/>
       </Fragment>
     )
   }

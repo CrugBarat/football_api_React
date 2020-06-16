@@ -1,9 +1,10 @@
 import React from 'react';
 
-const CompetitionDetails = (prop) => {
+const CompetitionDetails = (props) => {
+  if(!props.competition) return null;
 
   return (
-    <h3>Competition Details</h3>
+      <p>{props.competition.name}</p>
   )
 }
 
