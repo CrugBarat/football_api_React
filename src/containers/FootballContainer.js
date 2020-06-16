@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import CompetitionSelector from '../components/CompetitionSelector';
 import CompetitionDetails from '../components/CompetitionDetails';
+import logo from '../logo.png';
 
 class FootballContainer extends Component {
 
@@ -34,6 +35,8 @@ class FootballContainer extends Component {
 
     return (
       <Fragment>
+        <img className="logo" src={logo} alt=""/>
+        <p className="title">FOOTBALL API</p>
         <CompetitionSelector competitions={this.state.competitions} onCompSelect={this.handleCompetitionSelect}/>
         <CompetitionDetails competition={selectedCompetition}/>
       </Fragment>
