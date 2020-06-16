@@ -17,7 +17,7 @@ class FootballContainer extends Component {
       headers: {'X-Auth-Token': 'ff3990f4ff41489d9ad1bad2f46eb057'}
     })
     .then(res => res.json())
-    .then(competitions => this.setState({competitions: competitions}))
+    .then(competitions => this.setState({competitions: competitions.competitions}))
     .catch(err => console.err);
   }
 
@@ -25,7 +25,7 @@ class FootballContainer extends Component {
   render() {
     return (
       <Fragment>
-        <CompetitionSelector/>
+        <CompetitionSelector competitions={this.state.competitions}/>
         <CompetitionDetails/>
       </Fragment>
     )
