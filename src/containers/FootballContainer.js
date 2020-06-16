@@ -4,7 +4,6 @@ import CompetitionDetails from '../components/CompetitionDetails';
 import logo from '../logo.png';
 
 class FootballContainer extends Component {
-
   constructor(props) {
     super(props);
 
